@@ -1,0 +1,26 @@
+{
+  "Image": "quay.io/skyport/nodejs:lts",
+  "AltImages": [
+    "quay.io/skyport/nodejs:lts"
+  ],
+  "Cmd": "",
+  "Env": [
+    "START=npm install && npm start"
+  ],
+  "StopCommand": "stop",
+  "Scripts": {
+    "Install": [
+      {
+        "Uri": "https://raw.githubusercontent.com/skyportlabs/images_v2/main/nodejs/package.json",
+        "Path": "package.json"
+      }
+    ]
+  },
+  "Name": "Generic: Node.js",
+  "Description": "Node.js is a runtime environment that enables JavaScript code to run outside of web browsers, known for its efficiency in building scalable network applications and backend APIs. It utilizes an event-driven, non-blocking I/O model and boasts a vast ecosystem of packages (npm), making it ideal for modern web development across platforms",
+  "Author": "ma4z@ma4z.us.kg",
+  "AuthorName": "Hydren",
+  "Meta": {
+    "Version": "Skyport Images v2"
+  }
+}

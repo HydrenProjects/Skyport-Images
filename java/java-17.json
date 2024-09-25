@@ -12,7 +12,7 @@
   "Scripts": {
     "Install": [
       {
-        "Uri": "https://api.papermc.io/v2/projects/paper/versions/{{Version}}/builds/{{Build}}/downloads/paper-{{Version}}-{{Build}}.jar",
+        "Uri": "https://download.getbukkit.org/spigot/spigot-{{Version}}.jar",
         "Path": "server.jar"
       },
       {
@@ -24,17 +24,12 @@
   "Variables": {
     "Version": {
       "type": "text",
-      "default": "1.21.1",
-      "required": true
-    },
-    "Build": {
-      "type": "text",
-      "default": "89",
+      "default": "1.8.8",
       "required": true
     }
   },
   "Name": "Minecraft Java: 17",
-  "Description": "Java 17 For Minecraft with Paper MC.",
+  "Description": "Java 17 For Minecraft with Spigot MC.",
   "Author": "ma4z@ma4z.us.kg",
   "AuthorName": "Hydren",
   "Meta": {

@@ -1,0 +1,43 @@
+{
+"Image": "docker.io/privt/java:17",
+  "AltImages": [
+    "docker.io/privt/java:17"
+  ],
+  "Cmd": "",
+  "Env": [
+    "START=java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar"
+  ],
+  "StopCommand": "stop",
+  "features":["eula"],
+  "Scripts": {
+    "Install": [
+      {
+        "Uri": "https://api.papermc.io/v2/projects/paper/versions/{{Version}}/builds/{{Build}}/downloads/paper-{{Version}}-{{Build}}.jar",
+        "Path": "server.jar"
+      },
+      {
+        "Uri": "https://raw.githubusercontent.com/skyportlabs/images_v2/main/spigotmc/server.properties",
+        "Path": "server.properties"
+      }
+    ]
+  },
+  "Variables": {
+    "Version": {
+      "type": "text",
+      "default": "1.21.1",
+      "required": true
+    },
+    "Build": {
+      "type": "text",
+      "default": "89",
+      "required": true
+    }
+  },
+  "Name": "Minecraft Java: 17",
+  "Description": "Java 17 For Minecraft with Paper MC.",
+  "Author": "ma4z@ma4z.us.kg",
+  "AuthorName": "Hydren",
+  "Meta": {
+    "Version": "Skyport Images v2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+"Image": "docker.io/privt/java:18",
+  "AltImages": [
+    "docker.io/privt/java:18"
+  ],
+  "Cmd": "",
+  "Env": [
+    "START=java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar"
+  ],
+  "StopCommand": "stop",
+  "features":["eula"],
+  "Scripts": {
+    "Install": [
+      {
+        "Uri": "https://download.getbukkit.org/spigot/spigot-{{Version}}.jar",
+        "Path": "server.jar"
+      },
+      {
+        "Uri": "https://raw.githubusercontent.com/skyportlabs/images_v2/main/spigotmc/server.properties",
+        "Path": "server.properties"
+      }
+    ]
+  },
+  "Variables": {
+    "Version": {
+      "type": "text",
+      "default": "1.8.8",
+      "required": true
+    }
+  },
+  "Name": "Minecraft Java: 18",
+  "Description": "Java 18 For Minecraft with Spigot MC.",
+  "Author": "ma4z@ma4z.us.kg",
+  "AuthorName": "Hydren",
+  "Meta": {
+    "Version": "Skyport Images v2"
+  }
+}
